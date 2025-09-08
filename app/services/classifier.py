@@ -2,8 +2,6 @@ import os
 from transformers import pipeline
 
 # Configuração de ambiente
-CLASSIFIER_MODE = os.getenv("CLASSIFIER_MODE", "local")  # "local" ou "api"
-HF_MODEL = os.getenv("HF_MODEL", "facebook/bart-large-mnli")  # zero-shot model
 classifier = None
 
 # Categorias de classificação
@@ -12,7 +10,7 @@ CATEGORIES = ["Produtivo", "Improdutivo"]
 def _load_local_model():
     global classifier
     if classifier is None:
-        classifier = pipeline("zero-shot-classification", model=HF_MODEL)
+        classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
     return classifier
 
 def classify_email(text: str) -> str:
