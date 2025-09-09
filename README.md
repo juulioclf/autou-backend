@@ -45,26 +45,29 @@ python-multipart>=0.0.2
 transformers>=4.40
 torch>=2.0
 requests>=2.31
+```
 
-Como rodar localmente
+## Como rodar localmente
 
 Clone o repositório:
-
+```txt
 git clone https://github.com/juulioclf/autou-backend.git
 cd autou-backend
+```
 
 Atualize o pip e instale as dependências:
-
+```txt
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-
+```
 
 (Opcional) Baixe os modelos do spaCy manualmente:
-
+```txt
 python -m spacy download pt_core_news_sm
 python -m spacy download en_core_web_sm
-
+```
 
 Suba a API localmente com Uvicorn:
-
+```txt
 uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
