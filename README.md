@@ -50,9 +50,8 @@ Como rodar localmente
 
 Clone o repositório:
 
-git clone <URL_DO_REPO>
-cd <NOME_DO_PROJETO>
-
+git clone https://github.com/juulioclf/autou-backend.git
+cd autou-backend
 
 Atualize o pip e instale as dependências:
 
@@ -68,4 +67,4 @@ python -m spacy download en_core_web_sm
 
 Suba a API localmente com Uvicorn:
 
-uvicorn app.main:app --reload
+uvicorn app.main:app --host 0.0.0.0 --port 8000
