@@ -13,6 +13,9 @@ Suporta entrada de texto e upload de arquivos `.txt` e `.pdf`.
 
 ---
 
+## Frontend:
+https://github.com/juulioclf/autou-frontend
+
 ## Funcionalidades
 
 - Classificação de emails usando **Zero-Shot Classification** (`facebook/bart-large-mnli` via HuggingFace Transformers).
